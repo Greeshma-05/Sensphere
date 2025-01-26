@@ -1,10 +1,16 @@
 // Mobile Menu Toggle
+// Select the elements
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
 
-mobileMenuBtn.addEventListener('click', () => {
+// Function to toggle mobile menu
+function toggleMenu() {
     navLinks.classList.toggle('active');
-});
+}
+
+// Add event listener to the button
+mobileMenuBtn.addEventListener('click', toggleMenu);
+
 
 // Breathing Exercise
 // function startBreathing() {
