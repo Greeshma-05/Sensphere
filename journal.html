@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css"> <!-- Link your CSS file -->
 </head>
 <body>
-    <header>
         <nav class="navbar">
             <div class="nav-brand">
                 <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/icons/heart.svg" alt="Heart" class="nav-icon">
@@ -28,23 +27,80 @@
                 
             </ul>
         </nav>
-    </header>
+    
+    <style>
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        label {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        textarea {
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            resize: vertical;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
     <main>
         <h1>Welcome to the Journal Page</h1>
         <p>This is where you can add your journal entries or view existing ones.</p>
         <form action="#">
-
-    
             <!-- Multi-line Text Area -->
             <label for="textarea">Enter your thoughts:</label>
             <textarea id="textarea" name="textarea" rows="4" cols="50" placeholder="Write more here"></textarea>
             
             <!-- Submit Button -->
             <button type="submit">Submit</button>
-          </form>
+        </form>
     </main>
-    <footer>
-        <p>&copy; 2025 Your Website</p>
-    </footer>
 </body>
 </html>
