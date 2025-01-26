@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counselling Services</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    h1, h2 {
+      color: #4CAF50;
+    }
+    .counsellor {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+    .counsellor h3 {
+      margin: 0;
+      color: #333;
+    }
+    .counsellor p {
+      margin: 0.5rem 0;
+    }
+    .description {
+      margin-top: 2rem;
+    }
+    button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+        <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/icons/heart.svg" alt="Heart" class="nav-icon">
+        <span>Sensphere</span>
+    </div>
+    <button class="mobile-menu-btn">
+        <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/icons/menu.svg" alt="Menu" class="menu-icon">
+    </button>
+    <ul class="nav-links">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="music.html">Music Therapy</a></li>
+        <li><a href="counselling.html" class="active">Counselling</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="meditation.html">Meditation</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        
+    </ul>
+</nav>
+  <header>
+    <h1>Counselling Services</h1>
+  </header>
+
+  <div class="container">
+    <h2>Available Counsellors</h2>
+
+    <div class="counsellor">
+      <h3>Dr. John Smith</h3>
+      <p><strong>Availability:</strong> Monday - Friday, 10 AM - 4 PM</p>
+      <p><strong>Expertise:</strong> Stress and Anxiety Management</p>
+      <p><strong>Contact:</strong> johnsmith@example.com | +123 456 7890</p>
+    </div>
+
+    <div class="counsellor">
+      <h3>Dr. Emily Johnson</h3>
+      <p><strong>Availability:</strong> Tuesday - Saturday, 1 PM - 6 PM</p>
+      <p><strong>Expertise:</strong> Behavioral Therapy</p>
+      <p><strong>Contact:</strong> emilyjohnson@example.com | +987 654 3210</p>
+    </div>
+
+    <button onclick="viewMoreDetails()">View More Counsellors</button>
+
+    <div class="description">
+      <h2>How Counsellors Help</h2>
+      <p>Counsellors are trained professionals who provide a safe and supportive environment to discuss your concerns. They use evidence-based techniques to help you manage stress, overcome anxiety, and improve your overall mental well-being. Through sessions, they guide you to identify triggers, develop coping mechanisms, and build resilience.</p>
+    </div>
+  </div>
+  <div id="support-section" class="container" style="justify-content: center;">
+    <h2>Support Services</h2>
+    <p>We are here to support you in every way possible. Explore the resources below:</p>
+  
+    <div class="support">
+      <h3>Helpline Numbers</h3>
+      <ul>
+        <li><strong>General Support:</strong> +123 456 7890</li>
+        <li><strong>Mental Health Helpline:</strong> +987 654 3210</li>
+        <li><strong>Emergency:</strong> 112</li>
+      </ul>
+    </div>
+  
+    <div class="support">
+      <h3>Online Resources</h3>
+      <ul>
+        <li><a href="https://www.who.int/mental_health" target="_blank">World Health Organization - Mental Health</a></li>
+        <li><a href="https://www.nami.org" target="_blank">National Alliance on Mental Illness (NAMI)</a></li>
+        <li><a href="https://www.psychologytoday.com" target="_blank">Psychology Today</a></li>
+      </ul>
+    </div>
+  
+    <div class="support">
+      <h3>Tips for Immediate Relief</h3>
+      <p>Follow these steps to reduce stress quickly:</p>
+      <ol>
+        <li>Take deep breaths for at least 2 minutes.</li>
+        <li>Focus on a calming image or thought.</li>
+        <li>Engage in a simple activity like drawing or listening to music.</li>
+      </ol>
+    </div>
+  </div>
+  
+
+  <script>
+    function viewMoreDetails() {
+      alert('More counsellors will be added soon. Stay tuned!');
+    }
+  </script>
+</body>
+</html>

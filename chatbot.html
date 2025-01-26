@@ -1,0 +1,22 @@
+<div class="chatbot-container">
+    <button class="chatbot-icon" onclick="toggleChat()">
+      💬
+    </button>
+    <div class="chatbot-window" id="chatbotWindow">
+      <div class="chatbot-header">
+        <span>Chatbot</span>
+        <button class="close-btn" onclick="toggleChat()">✖</button>
+      </div>
+      <div class="chatbot-messages" id="chatbotMessages"></div>
+      <div class="chatbot-input">
+        <input
+          type="text"
+          id="userInput"
+          placeholder="Type your message here..."
+          onkeydown="if(event.key === 'Enter') sendMessage()"
+        />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+  

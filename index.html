@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensphere - Find Your Inner Peace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/icons/heart.svg" alt="Heart" class="nav-icon">
+            <span>Sensphere</span>
+        </div>
+        <button class="mobile-menu-btn">
+            <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/icons/menu.svg" alt="Menu" class="menu-icon">
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="music.html">Music Therapy</a></li>
+            <li><a href="counselling.html">Counselling</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="meditation.html">Meditation</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="tasks.html">Tasks</a></li>
+            
+        </ul>
+    </nav>
+    <div class="chatbot-container">
+        <button class="chatbot-icon" onclick="toggleChat()">💬</button>
+        <div class="chatbot-window" id="chatbotWindow">
+          <div class="chatbot-header">
+            <span>Chatbot</span>
+            <button class="close-btn" onclick="toggleChat()">✖</button>
+          </div>
+          <div class="chatbot-messages" id="chatbotMessages"></div>
+          <div class="chatbot-input">
+            <input
+              type="text"
+              id="userInput"
+              placeholder="Type your message here..."
+              onkeydown="if(event.key === 'Enter') sendMessage()"
+            />
+            <button onclick="sendMessage()">Send</button>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+
+    <main>
+        <section class="hero">
+            <h1>Find Peace of Mind</h1>
+            <p>Your journey to mental wellness starts here. Discover tools and resources to help manage anxiety and stress.</p>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/icons/music.svg" alt="Music">
+                </div>
+                <h3>Music Therapy</h3>
+                <p>Soothing melodies to calm your mind and reduce anxiety.</p>
+                <a href="music.html" class="feature-link">Start Listening</a>
+            </div>
+        
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/icons/book.svg" alt="Journal">
+                </div>
+                <h3>Journal</h3>
+                <p>Express your thoughts and track your emotional journey.</p>
+                <a href="journal.html" class="feature-link">Start Writing</a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/icons/heart.svg" alt="Meditation">
+                </div>
+                <h3>Meditation</h3>
+                <p>Guided sessions for mindfulness and relaxation.</p>
+                <a href="meditation.html" class="feature-link">Start Meditating</a>
+            </div>
+        </section>
+        <nav>
+            <ul>
+              <li><a href="meditation.html">Meditation</a></li>
+              <!-- Other menu options -->
+            </ul>
+          </nav>
+          
+
+        <section class="quick-tools">
+            <h2>Quick Access Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>Breathing Exercise</h3>
+                    <p>Take a moment to breathe deeply and center yourself.</p>
+                    <button class="tool-btn" onclick="startBreathing()">Start Breathing</button>
+                    <button class="tool-btn-sos" onclick="stopBreathing()">Stop</button>
+                </div>
+                <div class="tool-card">
+                    <h3>Daily Affirmation</h3>
+                    <p id="affirmation">I am capable of handling whatever comes my way today.</p>
+                    <button class="tool-btn" onclick="newAffirmation()">New Affirmation</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background: #88c9bf;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+  }
+  
+  main {
+    padding: 1em;
+  }
+  
+  .image-gallery img {
+    max-width: 100%;
+    height: auto;
+    margin: 0.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  #support-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fdfdfd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+ 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Therapy - PeaceHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/icons/heart.svg" alt="Heart" class="nav-icon">
+            <span>Sensphere</span>
+        </div>
+        <button class="mobile-menu-btn">
+            <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/icons/menu.svg" alt="Menu" class="menu-icon">
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="music.html" class="active">Music Therapy</a></li>
+            <li><a href="counselling.html">Counselling</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="meditation.html">Meditation</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="tasks.html">Tasks</a></li>
+            
+        </ul>
+    </nav>
+
+    <main class="music-page">
+        <h1>Music Therapy</h1>
+        <p class="subtitle">Soothing sounds to help you relax and find peace.</p>
+
+        <div class="music-player">
+            <div class="now-playing">
+                <h2 id="track-title">Select a track to play</h2>
+                <p id="track-duration"></p>
+            </div>
+
+            <div class="player-controls">
+                <button id="prev-btn">
+                    <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/icons/skip-back.svg" alt="Previous">
+                </button>
+                <button id="play-btn">
+                    <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/icons/play.svg" alt="Play" id="play-icon">
+                </button>
+                <button id="next-btn">
+                    <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/icons/skip-forward.svg" alt="Next">
+                </button>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+
+            <div class="playlist">
+                <h3>Playlist</h3>
+                <div class="playlist-items">
+                    <div class="playlist-item" data-track="https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3">
+                        <span class="track-name">Calming Rain</span>
+                        <span class="track-duration">3:15</span>
+                    </div>
+                    <div class="playlist-item" data-track="https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73468.mp3">
+                        <span class="track-name">Ocean Waves</span>
+                        <span class="track-duration">4:20</span>
+                    </div>
+                    <div class="playlist-item" data-track="https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73469.mp3">
+                        <span class="track-name">Forest Ambience</span>
+                        <span class="track-duration">5:30</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="music.js"></script>
+</body>
+</html>

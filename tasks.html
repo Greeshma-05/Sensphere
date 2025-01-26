@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        /* Navigation Styles */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4CAF50;
+        }
+
+        .active {
+            color: #4CAF50 !important;
+            border-bottom: 2px solid #4CAF50;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        #addTaskBtn {
+            background-color: #ffffff;
+            color: #4CAF50;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        #addTaskBtn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Main Content Layout */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Task Section Styles */
+        section {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #f0f2f5;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Task List Styles */
+        #taskList li {
+            background: #f8f9fa;
+            margin-bottom: 0.8rem;
+            padding: 1rem;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Modal Styles */
+        .modal {
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 400px;
+        }
+
+        /* Form Controls */
+        input, select {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Progress Section */
+        progress {
+            width: 100%;
+            height: 20px;
+            border-radius: 10px;
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: #f0f2f5;
+            border-radius: 10px;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: #4CAF50;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Rest of your HTML remains the same, the styling will automatically apply -->
+    <!-- Your existing body content goes here -->
+</body>
+</html>
+<nav class="navbar">
+    <div class="nav-brand">
+        <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/icons/heart.svg" alt="Heart" class="nav-icon">
+        <span>Sensphere</span>
+    </div>
+    <button class="mobile-menu-btn">
+        <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/icons/menu.svg" alt="Menu" class="menu-icon">
+    </button>
+    <ul class="nav-links">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="music.html">Music Therapy</a></li>
+        <li><a href="counselling.html">Counselling</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="meditation.html" >Meditation</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="tasks.html" class="active">Tasks</a></li>
+        
+    </ul>
+</nav>
+
+<header>
+    <h1>Task Management</h1>
+    <button id="addTaskBtn">+ Add New Task</button>
+</header>
+
+<main>
+    <section>
+        <h2>Current Tasks</h2>
+        <ul id="taskList">
+            <li>
+                <span>Complete project proposal</span>
+                <button>Complete</button>
+            </li>
+            <li>
+                <span>Review documentation</span>
+                <button>Complete</button>
+            </li>
+            <li>
+                <span>Team meeting preparation</span>
+                <button>Complete</button>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Progress Overview</h2>
+        <p>Tasks Completed</p>
+        <progress value="70" max="100"></progress>
+        <p>70% Complete</p>
+    </section>
+</main>
+
+<div id="addTaskModal" class="modal" style="display: none;">
+    <form id="taskForm">
+        <h3>Add New Task</h3>
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" required>
+        
+        <label for="priority">Priority:</label>
+        <select id="priority">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select>
+
+        <button type="submit">Add Task</button>
+    </form>
+</div>
